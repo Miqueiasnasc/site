@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="yes_style.css">
+    <title>Let's Go!</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #fff5f5;
+            font-family: 'Indie Flower', cursive;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #ffebee;
+            padding: 40px;
+            border-radius: 20px;
+            border: 3px solid #ff6b81;
+            box-shadow: 0 8px 20px rgba(255, 107, 129, 0.3);
+            max-width: 500px;
+            width: 90%;
+        }
+
+        .header_text {
+            font-size: 50px;
+            font-weight: bold;
+            color: #ff4757;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(255, 71, 87, 0.3);
+        }
+
+        .heart {
+            color: red;
+        }
+
+        .gif_container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .gif_container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .spotify_container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        iframe {
+            border-radius: 12px;
+        }
+    </style>
+</head> 
+<body>
+    <div class="container">
+        <h1 class="header_text">Let's go! <span class="heart">❤️</span></h1>
+        <div class="gif_container">
+            <img src="https://media.tenor.com/YTw87WdiaasAAAAi/tkthao219-capoo.gif" alt="Cute GIF">
+        </div>
+        
+        <div class="spotify_container">
+            <iframe id="spotifyPlayer" 
+                src="https://open.spotify.com/embed/track/6IPwKM3fUUzlElbvKw2sKl?utm_source=generator" 
+                width="300" height="80" frameborder="0" 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+            </iframe>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            // Tenta ativar autoplay após carregamento
+            setTimeout(() => {
+                const iframe = document.getElementById("spotifyPlayer");
+                iframe.src += "&autoplay=1"; 
+            }, 1000);
+        };
+    </script>
+</body> 
+</html>
